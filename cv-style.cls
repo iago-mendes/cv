@@ -19,8 +19,11 @@
 \definecolor{gray}{HTML}{222021}
 \definecolor{lightgray}{HTML}{999999}
 \definecolor{blue}{HTML}{66D9EE}
+\definecolor{darkblue}{HTML}{161C50}
 \definecolor{red}{HTML}{FA2772}
+\definecolor{darkred}{HTML}{420C14}
 \definecolor{orange}{HTML}{FE9720}
+\definecolor{darkorange}{HTML}{FF8A00}
 \definecolor{green}{HTML}{A7E22E}
 \definecolor{purple}{HTML}{9358FE}
 \definecolor{aquamarine}{HTML}{36AF90}
@@ -46,12 +49,12 @@
 
 
 \RequirePackage[quiet]{fontspec}
-\RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
+\RequirePackage{unicode-math}
 
-\newfontfamily\bodyfont{Roboto-Regular}[Path=fonts/]
-\newfontfamily\bodyfontit{Roboto-LightItalic}[Path=fonts/]
-\newfontfamily\thinfont{Roboto-Thin}[Path=fonts/]
-\newfontfamily\headingfont{RobotoCondensed-Bold}[Path=fonts/]
+\newfontfamily\bodyfont{Roboto-Regular}[Path=./fonts/]
+\newfontfamily\bodyfontit{Roboto-LightItalic}[Path=./fonts/]
+\newfontfamily\thinfont{Roboto-Thin}[Path=./fonts/]
+\newfontfamily\headingfont{RobotoCondensed-Bold}[Path=./fonts/]
 
 \defaultfontfeatures{Mapping=tex-text}
 \setmainfont[Mapping=tex-text, Color=textcolor, Path = fonts/]{Roboto-Light}
@@ -65,9 +68,9 @@
 
 \newcommand{\header}[2]{
   \begin{tikzpicture}[remember picture,overlay]
-    \node [rectangle, fill=fillheader, anchor=north, minimum width=\paperwidth, minimum height=2cm] (box) at (current page.north){};
+    \node [rectangle, fill=darkred, anchor=north, minimum width=\paperwidth, minimum height=2cm] (box) at (current page.north){};
     \node [anchor=center] (name) at (box) {
-      \fontsize{40pt}{65pt}\color{header}
+      \fontsize{40pt}{65pt}\color{darkorange}
       {\thinfont #1}{\bodyfont  #2}
     };
   \end{tikzpicture}

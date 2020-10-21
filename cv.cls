@@ -3,7 +3,7 @@
 
 \LoadClass[a4paper, 12pt]{article}
 
-\RequirePackage[top=1cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\RequirePackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage{graphicx, caption}
 \RequirePackage{float}
@@ -52,8 +52,6 @@
     \node [anchor=center] (name) at (box)
     {
         \fontsize{40pt}{50pt} \color{darkorange} \caveat #1
-    %   \fontsize{40pt}{65pt}\color{darkorange}
-    %   {\thinfont #1}{\bodyfont  #2}
     };
   \end{tikzpicture}
   \vspace{1cm}

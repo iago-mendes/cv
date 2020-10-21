@@ -1,9 +1,9 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{cv}[Curriculum vitae]
 
-\LoadClass[a4paper, 12pt]{article}
+\LoadClass[a4paper, 15pt]{article}
 
-\RequirePackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\RequirePackage[top=1cm, bottom=2cm, left=2cm, right=2cm]{geometry}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage{graphicx, caption}
 \RequirePackage{float}
@@ -12,6 +12,9 @@
 \RequirePackage{fontspec}
 \RequirePackage{hyperref}
 \RequirePackage{tikz}
+
+% titlesec
+\titleformat{\section} {\fontsize{25pt}{36pt}\ubuntubold} {}{0pt}{}
 
 % hyperref
 \hypersetup
@@ -24,9 +27,13 @@
 % fontspec
 \newfontfamily \ubuntu {Ubuntu-Regular} [Path=./fonts/]
 \newfontfamily \ubuntubold {Ubuntu-Bold} [Path=./fonts/]
-\newfontfamily \roboto {Roboto-Regular} [Path=./fonts/]
-\newfontfamily \robotobold {Roboto-Bold} [Path=./fonts/]
 \newfontfamily \caveat {CaveatBrush-Regular} [Path=./fonts/]
+\setmainfont{Roboto}
+[
+    Path = ./fonts/,
+    UprightFont = Roboto-Regular,
+    BoldFont = Roboto-Bold
+]
 
 % color
 \definecolor{white}{RGB}{255,255,255}
@@ -56,4 +63,9 @@
   \end{tikzpicture}
   \vspace{1cm}
   \vspace{-2\parskip}
+}
+
+\newcommand{\style}[3][red]
+{
+    \textcolor{#1}{#2}#3
 }

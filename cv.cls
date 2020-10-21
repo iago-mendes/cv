@@ -69,3 +69,16 @@
 {
     \textcolor{#1}{#2}#3
 }
+
+\newcommand{\roundpicture}[1]
+{
+    \tikz \node
+    [
+        circle,
+        minimum width = 4cm,
+        path picture = {\node [xshift=-0.0cm,yshift=-0.0cm] at (path picture bounding box.center)
+        {
+            \includegraphics[width=4cm]{#1}
+        };}
+    ]{};
+}

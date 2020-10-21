@@ -125,20 +125,29 @@
   \stepcounter{colorCounter}
 }
 
-\renewcommand{\section}[1]{
-  {\par\vspace{\parskip}
-  {
+% \renewcommand{\section}[1]{
+%   {\par\vspace{\parskip}
+%   {
+%     \LARGE\headingfont\color{headercolor}
+%     \@sectioncolor #1
+%   }
+%   \par\vspace{\parskip}}
+% }
+\newcommand{\csection}[1]
+{
+  % {\par\vspace{\parskip}
+  % {
     \LARGE\headingfont\color{headercolor}
     \@sectioncolor #1
-  }
-  \par\vspace{\parskip}}
+  % }
+  % \par\vspace{\parskip}}
 }
 
-\renewcommand{\subsection}[2]{
-  \par\vspace{.5\parskip}
-  \Large\headingfont\color{headercolor} #2
-  \par\vspace{.25\parskip}
-}
+% \renewcommand{\subsection}[2]{
+%   \par\vspace{.5\parskip}
+%   \Large\headingfont\color{headercolor} #2
+%   \par\vspace{.25\parskip}
+% }
 
 \newcommand{\jobtitle}[1]{
     {\color{gray}\bodyfontit #1}
@@ -162,22 +171,22 @@
     #4\vspace{\parsep}
   }\\}
 
-\setlength{\TPHorizModule}{1cm}
-\setlength{\TPVertModule}{1cm}
-\newenvironment{aside}{
-  \let\oldsection\section
-  \renewcommand{\section}[1]{
-    \par\vspace{\baselineskip}{\Large\headingfont\color{headercolor} ##1}
-  }
-  \begin{textblock}{4.6}(1, 1.87)
-  \begin{flushright}
-  \obeycr
-}{
-  \restorecr
-  \end{flushright}
-  \end{textblock}
-  \let\section\oldsection
-}
+% \setlength{\TPHorizModule}{1cm}
+% \setlength{\TPVertModule}{1cm}
+% \newenvironment{aside}{
+%   \let\oldsection\section
+%   \renewcommand{\section}[1]{
+%     \par\vspace{\baselineskip}{\Large\headingfont\color{headercolor} ##1}
+%   }
+%   \begin{textblock}{4.6}(1, 1.87)
+%   \begin{flushright}
+%   \obeycr
+% }{
+%   \restorecr
+%   \end{flushright}
+%   \end{textblock}
+%   \let\section\oldsection
+% }
 
 \RequirePackage[left=6.4cm,top=1cm,right=1cm,bottom=1cm,nohead,nofoot]{geometry}
 \RequirePackage{hyperref}

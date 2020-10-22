@@ -3,7 +3,7 @@
 
 \LoadClass[a4paper, 15pt]{article}
 
-\RequirePackage[top=1cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\RequirePackage[top=1cm, bottom=2cm, left=1.5cm, right=1.5cm]{geometry}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage{graphicx, caption}
 \RequirePackage{float}
@@ -12,6 +12,8 @@
 \RequirePackage{fontspec}
 \RequirePackage{hyperref}
 \RequirePackage{tikz}
+\RequirePackage{multicol}
+\RequirePackage{fontawesome}
 
 % titlesec
 \titleformat{\section} {\fontsize{25pt}{36pt}\ubuntubold} {}{0pt}{}
@@ -81,4 +83,18 @@
             \includegraphics[width=4cm]{#1}
         };}
     ]{};
+}
+
+\newcommand{\firstsection}[4]
+{
+    \fontsize{10pt}{12pt}
+    \begin{flushleft} \begin{multicols}{4}
+        \vfill\null \vfill\null #1 \vfill\null \vfill\null
+        \columnbreak
+        #2 \vfill\null \vfill\null
+        \columnbreak
+        #3 \vfill\null \vfill\null
+        \columnbreak
+        #4 \vfill\null \vfill\null
+    \end{multicols} \end{flushleft}
 }

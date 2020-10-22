@@ -14,6 +14,7 @@
 \RequirePackage{tikz}
 \RequirePackage{multicol}
 \RequirePackage{fontawesome}
+\RequirePackage{xstring}
 
 % titlesec
 \titleformat{\section} {\fontsize{25pt}{36pt}\ubuntubold} {}{0pt}{}
@@ -39,6 +40,7 @@
 
 % color
 \definecolor{white}{RGB}{255,255,255}
+\definecolor{black}{RGB}{0,0,0}
 \definecolor{darkgray}{HTML}{2d2d43}
 \definecolor{gray}{HTML}{222021}
 \definecolor{lightgray}{HTML}{999999}
@@ -65,11 +67,6 @@
   \end{tikzpicture}
   \vspace{1cm}
   \vspace{-2\parskip}
-}
-
-\newcommand{\style}[3][red]
-{
-    \textcolor{#1}{#2}#3
 }
 
 \newcommand{\roundpicture}[1]
@@ -99,4 +96,27 @@
         \columnbreak
         #4 \vfill\null
     \end{multicols} \end{flushleft}
+}
+
+\newcounter{colorCounter}
+\newcommand{\style}[1]
+{
+    \textcolor
+    {
+        \ifcase \value{colorCounter}
+            blue\or
+            red\or
+            orange\or
+            green\or
+            purple\or
+            aquamarine\or
+            pink\or
+            darkblue\or
+            darkred\or
+            darkorange
+        \else black
+        \fi
+    }
+    {\StrLeft{#1}{3}}\StrGobbleLeft{#1}{3}
+    \stepcounter{colorCounter}
 }

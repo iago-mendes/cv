@@ -118,10 +118,10 @@
 }
 
 \newenvironment{entrylist}
-    {\begin{itemize}[leftmargin=3cm, labelsep=1cm]}
+    {\begin{itemize}[leftmargin=3.5cm, labelsep=0.5cm]}
     {\end{itemize}}
 \newcommand{\entry}[4]
 {
-    \item[#1] {\fontsize{12pt}{15pt} \ubuntubold #2} \hfill {\footnotesize \addfontfeature{Color=lightgray} #3} \\
+    \item[#1] {\fontsize{12pt}{15pt} \ubuntubold #2} \hfill {\footnotesize #3} \\
     #4 \vspace{\parsep}
 }

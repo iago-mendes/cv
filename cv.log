@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2020.8.26)  22 OCT 2020 15:00
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2020.8.26)  22 OCT 2020 15:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1045,31 +1045,6 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 41.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 41.
-
-Package fontspec Info: Font family 'Roboto(1)' created for font 'Roboto' with
-(fontspec)             options [Ligatures=TeX,Path = ./fonts/,UprightFont =
-(fontspec)             Roboto-Regular,BoldFont = Roboto-Bold,Color=lightgray].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"[./fonts/Roboto-Regular]/OT:script=latn;language=dfl
-t;mapping=tex-text;color=BFBFBFFF
-(fontspec)             ;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
-(fontspec)             <->"[./fonts/Roboto-Regular]/OT:script=latn;language=dfl
-t;+smcp;mapping=tex-text;color=BFBFBFFF
-(fontspec)             ;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->"[./fonts/Roboto-Bold]/OT:script=latn;language=dflt;m
-apping=tex-text;color=BFBFBFFF
-(fontspec)             ;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
-(fontspec)             <->"[./fonts/Roboto-Bold]/OT:script=latn;language=dflt;+
-smcp;mapping=tex-text;color=BFBFBFFF
-(fontspec)             ;"
-
  [1
 
 ]
@@ -1080,12 +1055,6 @@ LaTeX Font Warning: Font shape `TU/Ubuntu-Bold(0)/m/it' undefined
 
 LaTeX Font Warning: Font shape `TU/Roboto(0)/m/it' undefined
 (Font)              using `TU/Roboto(0)/m/n' instead on input line 114.
-
-
-Overfull \hbox (1.23582pt too wide) in paragraph at lines 124--129
-[]\TU/Ubuntu-Bold(0)/m/it/12 International Astronomy and Astrophysics Competiti
-on (IAAC) - Official Am-
- []
 
 [2] [3]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 206.
@@ -1102,11 +1071,11 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 206.
  ) 
 Here is how much of TeX's memory you used:
- 24613 strings out of 481761
- 489833 string characters out of 5936735
- 784136 words of memory out of 5000000
- 41216 multiletter control sequences out of 15000+600000
- 532978 words of font info for 60 fonts, out of 8000000 for 9000
+ 24596 strings out of 481761
+ 489004 string characters out of 5936735
+ 784121 words of memory out of 5000000
+ 41205 multiletter control sequences out of 15000+600000
+ 532938 words of font info for 55 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  68i,6n,83p,420b,930s stack positions out of 5000i,500n,10000p,200000b,80000s
 

@@ -114,9 +114,7 @@
             pink\or
             darkblue\or
             darkred\or
-            darkorange
-        \else black
-        \fi
+            darkorange\else black\fi
     }
     {\StrLeft{#1}{3}}\StrGobbleLeft{#1}{3}
     \stepcounter{colorCounter}

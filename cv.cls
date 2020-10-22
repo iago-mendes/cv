@@ -105,7 +105,6 @@
             Turquoise\or
             Magenta\or
             Aquamarine\or
-            Violet\or
             RedOrange\or
             Emerald\or
             Peach\or

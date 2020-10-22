@@ -1,7 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{cv}[Curriculum vitae]
 
-\LoadClass[a4paper, 15pt]{article}
+\LoadClass[a4paper, 10pt]{article}
 
 \RequirePackage[top=1cm, bottom=2cm, left=1.5cm, right=1.5cm]{geometry}
 \RequirePackage[utf8]{inputenc}
@@ -15,6 +15,7 @@
 \RequirePackage{multicol}
 \RequirePackage{fontawesome}
 \RequirePackage{xstring}
+\RequirePackage{enumitem}
 
 % titlesec
 \titleformat{\section} {\fontsize{25pt}{36pt}\ubuntubold} {}{0pt}{}
@@ -119,4 +120,13 @@
     }
     {\StrLeft{#1}{3}}\StrGobbleLeft{#1}{3}
     \stepcounter{colorCounter}
+}
+
+\newenvironment{entrylist}
+    {\begin{itemize}[leftmargin=3cm, labelsep=1cm]}
+    {\end{itemize}}
+\newcommand{\entry}[4]
+{
+    \item[#1] {\fontsize{12pt}{15pt} \ubuntubold #2} \hfill {\footnotesize \addfontfeature{Color=lightgray} #3} \\
+    #4 \vspace{\parsep}
 }

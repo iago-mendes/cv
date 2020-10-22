@@ -24,7 +24,11 @@
 {
     pdftitle=CV \textbar{} Iago Mendes,
     pdfauthor=Iago Braz Mendes,
-    pdfsubject=CV
+    pdfsubject=CV,
+    colorlinks=true,
+    linkcolor=SkyBlue,
+    filecolor=SkyBlue,      
+    urlcolor=SkyBlue
 }
 
 \newfontfamily \ubuntu {Ubuntu-Regular} [Path=./fonts/]

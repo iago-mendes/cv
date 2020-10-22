@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2020.8.26)  22 OCT 2020 15:04
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2020.8.26)  22 OCT 2020 15:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1042,33 +1042,33 @@ LaTeX Info: Redefining \nameref on input line 3.
 File: ./img/me.png Graphic file (type bmp)
 <./img/me.png>
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 41.
+(Font)              <7> on input line 39.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 41.
+(Font)              <5> on input line 39.
  [1
 
 ]
 
 LaTeX Font Warning: Font shape `TU/Ubuntu-Bold(0)/m/it' undefined
-(Font)              using `TU/Ubuntu-Bold(0)/m/n' instead on input line 114.
+(Font)              using `TU/Ubuntu-Bold(0)/m/n' instead on input line 117.
 
 
 LaTeX Font Warning: Font shape `TU/Roboto(0)/m/it' undefined
-(Font)              using `TU/Roboto(0)/m/n' instead on input line 114.
+(Font)              using `TU/Roboto(0)/m/n' instead on input line 117.
 
 [2] [3]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 206.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 206.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 209.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 209.
  (./cv.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 206.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 206.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 209.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 209.
 Package rerunfilecheck Info: File `cv.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 206.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 209.
  ) 
 Here is how much of TeX's memory you used:
  24596 strings out of 481761

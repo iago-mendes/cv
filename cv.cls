@@ -1,14 +1,15 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{cv}[Curriculum vitae]
 
-\LoadClass[a4paper, 10pt]{article}
+\LoadClass[a4paper, 10pt, dvipsnames]{article}
 
+\RequirePackage[dvipsnames]{xcolor}
 \RequirePackage[top=1cm, bottom=2cm, left=1.5cm, right=1.5cm]{geometry}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage{graphicx, caption}
 \RequirePackage{float}
 \RequirePackage{titlesec}
-\RequirePackage{color}
+% \RequirePackage{color}
 \RequirePackage{fontspec}
 \RequirePackage{hyperref}
 \RequirePackage{tikz}
@@ -17,10 +18,8 @@
 \RequirePackage{xstring}
 \RequirePackage{enumitem}
 
-% titlesec
 \titleformat{\section} {\fontsize{25pt}{36pt}\ubuntubold} {}{0pt}{}
 
-% hyperref
 \hypersetup
 {
     pdftitle=CV \textbar{} Iago Mendes,
@@ -28,7 +27,6 @@
     pdfsubject=CV
 }
 
-% fontspec
 \newfontfamily \ubuntu {Ubuntu-Regular} [Path=./fonts/]
 \newfontfamily \ubuntubold {Ubuntu-Bold} [Path=./fonts/]
 \newfontfamily \caveat {CaveatBrush-Regular} [Path=./fonts/]
@@ -39,31 +37,21 @@
     BoldFont = Roboto-Bold
 ]
 
-% color
-\definecolor{white}{RGB}{255,255,255}
-\definecolor{black}{RGB}{0,0,0}
-\definecolor{darkgray}{HTML}{2d2d43}
-\definecolor{gray}{HTML}{222021}
-\definecolor{lightgray}{HTML}{999999}
-\definecolor{blue}{HTML}{66D9EE}
-\definecolor{darkblue}{HTML}{161C50}
-\definecolor{red}{HTML}{FA2772}
-\definecolor{darkred}{HTML}{420C14}
-\definecolor{orange}{HTML}{FE9720}
-\definecolor{darkorange}{HTML}{FF8A00}
-\definecolor{green}{HTML}{A7E22E}
-\definecolor{purple}{HTML}{9358FE}
-\definecolor{aquamarine}{HTML}{36AF90}
-\definecolor{pink}{HTML}{800080}
+\definecolor{headerBackground}{HTML}{191C24}
+\definecolor{headerText}{HTML}{11BBBB}
+\definecolor{backgroundColor}{HTML}{292F3D}
+\definecolor{textColor}{HTML}{D8DBE2}
+\pagecolor{backgroundColor}
+\color{textColor}
 
 \newcommand{\header}[1]
 {
   \begin{tikzpicture}[remember picture,overlay]
-    \node [rectangle, fill=darkred, anchor=north, minimum width=\paperwidth, minimum height=2cm]
+    \node [rectangle, fill=headerBackground, anchor=north, minimum width=\paperwidth, minimum height=2cm]
         (box) at (current page.north){};
     \node [anchor=center] (name) at (box)
     {
-        \fontsize{40pt}{50pt} \color{darkorange} \caveat #1
+        \fontsize{40pt}{50pt} \color{headerText} \caveat #1
     };
   \end{tikzpicture}
   \vspace{1cm}
@@ -105,16 +93,21 @@
     \textcolor
     {
         \ifcase \value{colorCounter}
-            blue\or
-            red\or
-            orange\or
-            green\or
-            purple\or
-            aquamarine\or
-            pink\or
-            darkblue\or
-            darkred\or
-            darkorange\else black\fi
+            Goldenrod\or
+            Cyan\or
+            Red\or
+            Purple\or
+            Green\or
+            Turquoise\or
+            Magenta\or
+            Aquamarine\or
+            Violet\or
+            RedOrange\or
+            Emerald\or
+            Peach\or
+            LimeGreen\or
+            Dandelion\or
+            Maroon\else textColor\fi
     }
     {\StrLeft{#1}{3}}\StrGobbleLeft{#1}{3}
     \stepcounter{colorCounter}

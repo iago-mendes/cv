@@ -74,27 +74,29 @@
 
 \newcommand{\roundpicture}[1]
 {
-    \tikz \node
-    [
-        circle,
-        minimum width = 4cm,
-        path picture = {\node [xshift=-0.0cm,yshift=-0.0cm] at (path picture bounding box.center)
-        {
-            \includegraphics[width=4cm]{#1}
-        };}
-    ]{};
+    \begin{center}
+        \tikz \node
+        [
+            circle,
+            minimum width = 5cm,
+            path picture = {\node [xshift=-0.0cm,yshift=-0.0cm] at (path picture bounding box.center)
+            {
+                \includegraphics[width=5cm]{#1}
+            };}
+        ]{};
+    \end{center}
 }
 
 \newcommand{\firstsection}[4]
 {
     \fontsize{10pt}{12pt}
     \begin{flushleft} \begin{multicols}{4}
-        \vfill\null \vfill\null #1 \vfill\null \vfill\null
+        #1 \vfill\null
         \columnbreak
-        #2 \vfill\null \vfill\null
+        #2 \vfill\null
         \columnbreak
-        #3 \vfill\null \vfill\null
+        #3 \vfill\null
         \columnbreak
-        #4 \vfill\null \vfill\null
+        #4 \vfill\null
     \end{multicols} \end{flushleft}
 }

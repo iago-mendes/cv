@@ -41,9 +41,9 @@
 
 \newcommand{\header}[2] {
     \noindent
-    \begin{minipage}[c]{0.3\linewidth}
+    \begin{minipage}[c]{0.35\linewidth}
         \begin{center}
-            {\fontsize{35pt}{0pt} \color{highlight} \caveat #1}
+            {\fontsize{40pt}{0pt} \color{highlight} \caveat #1}
             
             \vspace*{0.2cm}
             
@@ -53,13 +53,14 @@
     \hfill
     \begin{minipage}[c]{0.65\linewidth}
         \begin{center}
-            \begin{tabular}{clccl}
-                {\color{highlight} \faCode} & iagomendes.com && {\color{highlight} \faPhone} & 440-581-2598 \\
-                {\color{highlight} \faGithub} & github.com/iago-mendes && {\color{highlight} \faEnvelope} & ibrazmen@oberlin.edu \\
-                {\color{highlight} \faLinkedin} & linkedin.com/in/mendes-iago && \\
+            \begin{tabular}{clcl}
+                {\color{highlight} \faCode} & iagomendes.com & {\color{highlight} \faPhone} & 440-581-2598 \\
+                {\color{highlight} \faGithub} & github.com/iago-mendes & {\color{highlight} \faEnvelope} & ibrazmen@oberlin.edu \\
+                {\color{highlight} \faLinkedin} & linkedin.com/in/mendes-iago & \\
             \end{tabular}
         \end{center}
     \end{minipage}
+    \vspace*{-0.5cm}
 }
 
 

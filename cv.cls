@@ -39,48 +39,54 @@
 % Remove page numbering
 \pagenumbering{gobble}
 
-% \setlength{\columnsep}{0cm}
-\renewcommand{\arraystretch}{1.25}
 \newcommand{\header}[2] {
-    \begin{multicols}{3}
-        \vspace*{0cm}
-
-        {\fontsize{35pt}{35pt} \color{highlight} \caveat #1}
-
-        {\large \bf #2}
-
-        \vspace*{0cm}
-
-        \columnbreak
-
+    \noindent
+    \begin{minipage}[c]{0.3\linewidth}
         \begin{center}
-            \vspace*{0cm}
-            \begin{tabular}{cl}
-                {\color{highlight} \faPhone} & 440-581-2598 \\
-                {\color{highlight} \faCode} & iagomendes.com \\
-                {\color{highlight} \faEnvelope} & ibrazmen@oberlin.edu \\
-            \end{tabular}
-            \vspace*{0cm}
+            {\fontsize{35pt}{0pt} \color{highlight} \caveat #1}
+            
+            \vspace*{0.2cm}
+            
+            {\large \bf #2}
         \end{center}
-
-        \columnbreak
-
+    \end{minipage}
+    \hfill
+    \begin{minipage}[c]{0.65\linewidth}
         \begin{center}
-            \vspace*{0cm}
-            \begin{tabular}{cl}
-                {\color{highlight} \faGithub} & github.com/iago-mendes \\
-                {\color{highlight} \faLinkedin} & linkedin.com/in/mendesi \\
+            \begin{tabular}{clccl}
+                {\color{highlight} \faCode} & iagomendes.com && {\color{highlight} \faPhone} & 440-581-2598 \\
+                {\color{highlight} \faGithub} & github.com/iago-mendes && {\color{highlight} \faEnvelope} & ibrazmen@oberlin.edu \\
+                {\color{highlight} \faLinkedin} & linkedin.com/in/mendes-iago && \\
             \end{tabular}
-            \vspace*{0cm}
         \end{center}
-    \end{multicols}
-
+    \end{minipage}
 }
 
-% \titleformat{\section} {\fontsize{25pt}{36pt}\ubuntubold} {}{0pt}{}
+
 \titleformat{\section}
     {\bfseries \Large \color{highlight}} % format
     {} % label
     {0pt} % sep
     {} % before-code
-    [\vspace{-17.5pt} \color{highlight} \rule{\textwidth}{0.3pt}] % after-code
+    [\vspace{-17.5pt} \color{highlight} \rule{\textwidth}{0.3pt} \vspace{-1.2cm}] % after-code
+
+
+\newcommand{\entryTitle}[1]{
+    \subsection{#1}
+}
+\titleformat{\subsection}
+    {\bfseries \large} % format
+    {} % label
+    {0pt} % sep
+    {} % before-code
+    [\vspace*{-0.25cm}] % after-code
+
+
+\newcommand{\entrySubtitle}[3]{
+    \hspace*{0.5cm} \textbf{#1 \hfill (#2 -- #3)}
+}
+
+
+% Style item lists
+\setitemize{leftmargin=1.25cm}
+\setlength\itemsep{1cm}

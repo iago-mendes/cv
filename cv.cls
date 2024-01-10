@@ -1,15 +1,14 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{cv}[Curriculum vitae]
 
-\LoadClass[a4paper, 10pt, dvipsnames]{article}
+\LoadClass[a4paper, 12pt, dvipsnames]{article}
 
 \RequirePackage[dvipsnames]{xcolor}
-\RequirePackage[top=1cm, bottom=2cm, left=1.5cm, right=1.5cm]{geometry}
+\RequirePackage[top=1cm, bottom=1cm, left=1cm, right=1cm]{geometry}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage{graphicx, caption}
 \RequirePackage{float}
 \RequirePackage{titlesec}
-% \RequirePackage{color}
 \RequirePackage{fontspec}
 \RequirePackage{hyperref}
 \RequirePackage{tikz}
@@ -18,12 +17,9 @@
 \RequirePackage{xstring}
 \RequirePackage{enumitem}
 
-\titleformat{\section} {\fontsize{25pt}{36pt}\ubuntubold} {}{0pt}{}
-
-\hypersetup
-{
+\hypersetup {
     pdftitle=CV \textbar{} Iago Mendes,
-    pdfauthor=Iago Braz Mendes,
+    pdfauthor=Iago Mendes,
     pdfsubject=CV,
     colorlinks=true,
     linkcolor=SkyBlue,
@@ -31,96 +27,60 @@
     urlcolor=SkyBlue
 }
 
-\newfontfamily \ubuntu {Ubuntu-Regular} [Path=./fonts/]
-\newfontfamily \ubuntubold {Ubuntu-Bold} [Path=./fonts/]
 \newfontfamily \caveat {CaveatBrush-Regular} [Path=./fonts/]
-\setmainfont{Roboto}
-[
-    Path = ./fonts/,
-    UprightFont = Roboto-Regular,
-    BoldFont = Roboto-Bold
-]
 
-\definecolor{headerBackground}{HTML}{191C24}
-\definecolor{headerText}{HTML}{11BBBB}
-\definecolor{backgroundColor}{HTML}{292F3D}
-\definecolor{textColor}{HTML}{D8DBE2}
-\pagecolor{backgroundColor}
-\color{textColor}
+\definecolor{background}{HTML}{E1E1E6}
+\definecolor{text}{HTML}{191622}
+\definecolor{highlight}{HTML}{438e9c}
 
-\newcommand{\header}[1]
-{
-  \begin{tikzpicture}[remember picture,overlay]
-    \node [rectangle, fill=headerBackground, anchor=north, minimum width=\paperwidth, minimum height=2cm]
-        (box) at (current page.north){};
-    \node [anchor=center] (name) at (box)
-    {
-        \fontsize{40pt}{50pt} \color{headerText} \caveat #1
-    };
-  \end{tikzpicture}
-  \vspace{1cm}
-  \vspace{-2\parskip}
-}
+\pagecolor{background}
+\color{text}
 
-\newcommand{\roundpicture}[1]
-{
-    \begin{center}
-        \tikz \node
-        [
-            circle,
-            minimum width = 5cm,
-            path picture = {\node [xshift=-0.0cm,yshift=-0.0cm] at (path picture bounding box.center)
-            {
-                \includegraphics[width=5cm]{#1}
-            };}
-        ]{};
-    \end{center}
-}
+% Remove page numbering
+\pagenumbering{gobble}
 
-\newcommand{\firstsection}[4]
-{
-    \fontsize{10pt}{12pt}
-    \begin{flushleft} \begin{multicols}{4}
-        #1 \vfill\null
+% \setlength{\columnsep}{0cm}
+\renewcommand{\arraystretch}{1.25}
+\newcommand{\header}[2] {
+    \begin{multicols}{3}
+        \vspace*{0cm}
+
+        {\fontsize{35pt}{35pt} \color{highlight} \caveat #1}
+
+        {\large \bf #2}
+
+        \vspace*{0cm}
+
         \columnbreak
-        #2 \vfill\null
+
+        \begin{center}
+            \vspace*{0cm}
+            \begin{tabular}{cl}
+                {\color{highlight} \faPhone} & 440-581-2598 \\
+                {\color{highlight} \faCode} & iagomendes.com \\
+                {\color{highlight} \faEnvelope} & ibrazmen@oberlin.edu \\
+            \end{tabular}
+            \vspace*{0cm}
+        \end{center}
+
         \columnbreak
-        #3 \vfill\null
-        \columnbreak
-        #4 \vfill\null
-    \end{multicols} \end{flushleft}
+
+        \begin{center}
+            \vspace*{0cm}
+            \begin{tabular}{cl}
+                {\color{highlight} \faGithub} & github.com/iago-mendes \\
+                {\color{highlight} \faLinkedin} & linkedin.com/in/mendesi \\
+            \end{tabular}
+            \vspace*{0cm}
+        \end{center}
+    \end{multicols}
+
 }
 
-\newcounter{colorCounter}
-\newcommand{\style}[1]
-{
-    \textcolor
-    {
-        \ifcase \value{colorCounter}
-            Goldenrod\or
-            Cyan\or
-            Red\or
-            Purple\or
-            Green\or
-            Turquoise\or
-            Magenta\or
-            Aquamarine\or
-            RedOrange\or
-            Emerald\or
-            Peach\or
-            LimeGreen\or
-            Dandelion\or
-            Maroon\else textColor\fi
-    }
-    {\StrLeft{#1}{3}}\StrGobbleLeft{#1}{3}
-    \stepcounter{colorCounter}
-}
-
-\newenvironment{entrylist}
-    {\begin{itemize}[leftmargin=3.5cm, labelsep=0.5cm]}
-    {\end{itemize}}
-\newcommand{\entry}[4]
-{
-    \item[#1] {\fontsize{12pt}{15pt} \ubuntubold #2} \hfill {\footnotesize #3} \\
-    #4 \vspace{\parsep}
-}
+% \titleformat{\section} {\fontsize{25pt}{36pt}\ubuntubold} {}{0pt}{}
+\titleformat{\section}
+    {\bfseries \Large \color{highlight}} % format
+    {} % label
+    {0pt} % sep
+    {} % before-code
+    [\vspace{-17.5pt} \color{highlight} \rule{\textwidth}{0.3pt}] % after-code

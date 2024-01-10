@@ -60,7 +60,7 @@
             \end{tabular}
         \end{center}
     \end{minipage}
-    \vspace*{-0.5cm}
+    % \vspace*{-0.5cm}
 }
 
 
@@ -69,12 +69,9 @@
     {} % label
     {0pt} % sep
     {} % before-code
-    [\vspace{-17.5pt} \color{highlight} \rule{\textwidth}{0.3pt} \vspace{-1.2cm}] % after-code
+    [\vspace{-17.5pt} \color{highlight} \rule{\textwidth}{0.3pt}] % after-code
+\titlespacing*{\section} {0cm}{-0.25cm}{-0.1cm}
 
-
-\newcommand{\entryTitle}[1]{
-    \subsection{#1}
-}
 \titleformat{\subsection}
     {\bfseries \large} % format
     {} % label
@@ -83,11 +80,26 @@
     [\vspace*{-0.25cm}] % after-code
 
 
-\newcommand{\entrySubtitle}[3]{
-    \hspace*{0.5cm} \textbf{#1 \hfill (#2 -- #3)}
+\newenvironment{entry}[1]{
+    \subsection{#1}
+    
+    \hspace*{0.5cm}
+    \begin{minipage}{0.97\linewidth}
+}{
+    \end{minipage}
 }
 
 
-% Style item lists
-\setitemize{leftmargin=1.25cm}
-\setlength\itemsep{1cm}
+\newcommand{\entryItem}[3]{
+    \textbf{#1 \hfill #2 -- #3}
+}
+
+
+\newenvironment{items}{
+    \vspace*{-0.35cm}
+	\begin{itemize}[leftmargin=0.6cm]
+		\setlength\itemsep{-0.1cm}
+}{
+	\end{itemize}
+    \vspace*{-0.25cm}
+}

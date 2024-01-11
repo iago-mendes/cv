@@ -69,7 +69,7 @@
     {} % label
     {0pt} % sep
     {} % before-code
-    [\vspace{-17.5pt} \color{highlight} \rule{\textwidth}{0.3pt}] % after-code
+    [\vspace{-17.5pt} \color{highlight} \rule{\linewidth}{0.3pt}] % after-code
 \titlespacing*{\section} {0cm}{-0.25cm}{-0.1cm}
 
 \titleformat{\subsection}

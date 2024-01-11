@@ -4,7 +4,7 @@
 \LoadClass[a4paper, 12pt, dvipsnames]{article}
 
 \RequirePackage[dvipsnames]{xcolor}
-\RequirePackage[top=0.5cm, bottom=0.5cm, left=0.5cm, right=0.5cm]{geometry}
+\RequirePackage[top=1cm, bottom=0.5cm, left=0.5cm, right=0.5cm]{geometry}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage{graphicx, caption}
 \RequirePackage{float}

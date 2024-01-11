@@ -78,6 +78,7 @@
     {0pt} % sep
     {} % before-code
     [\vspace*{-0.25cm}] % after-code
+\titlespacing*{\subsection} {0cm}{0cm}{0.25cm}
 
 
 \newenvironment{entry}[1]{

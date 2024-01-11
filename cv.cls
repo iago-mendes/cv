@@ -29,7 +29,7 @@
 
 \newfontfamily \caveat {CaveatBrush-Regular} [Path=./fonts/]
 
-\definecolor{background}{HTML}{E1E1E6}
+\definecolor{background}{HTML}{f1f1f3}
 \definecolor{text}{HTML}{191622}
 \definecolor{highlight}{HTML}{438e9c}
 

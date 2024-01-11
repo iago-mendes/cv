@@ -91,8 +91,8 @@
 }
 
 
-\newcommand{\entryItem}[3]{
-    \textbf{#1 \hfill #2 -- #3}
+\newcommand{\entryItem}[2]{
+    \textbf{#1 \hfill #2}
 }
 
 

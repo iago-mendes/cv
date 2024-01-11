@@ -60,7 +60,7 @@
             \end{tabular}
         \end{center}
     \end{minipage}
-    % \vspace*{-0.5cm}
+    \vspace*{0.25cm}
 }
 
 

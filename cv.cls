@@ -10,7 +10,7 @@
 \RequirePackage{float}
 \RequirePackage{titlesec}
 \RequirePackage{fontspec}
-\RequirePackage{hyperref}
+\RequirePackage[hidelinks]{hyperref}
 \RequirePackage{tikz}
 \RequirePackage{multicol}
 \RequirePackage{fontawesome}
@@ -21,10 +21,7 @@
     pdftitle=CV \textbar{} Iago Mendes,
     pdfauthor=Iago Mendes,
     pdfsubject=CV,
-    colorlinks=true,
-    linkcolor=SkyBlue,
-    filecolor=SkyBlue,      
-    urlcolor=SkyBlue
+    colorlinks=false,
 }
 
 \newfontfamily \caveat {CaveatBrush-Regular} [Path=./fonts/]
@@ -54,9 +51,9 @@
     \begin{minipage}[c]{0.65\linewidth}
         \begin{center}
             \begin{tabular}{clcl}
-                {\color{highlight} \faCode} & iagomendes.com & {\color{highlight} \faPhone} & 440-581-2598 \\
-                {\color{highlight} \faGithub} & github.com/iago-mendes & {\color{highlight} \faEnvelope} & ibrazmen@oberlin.edu \\
-                {\color{highlight} \faLinkedin} & linkedin.com/in/mendes-iago & \\
+                {\color{highlight} \faCode} & \link{https://iagomendes.com/}{iagomendes.com} & {\color{highlight} \faPhone} & 440-581-2598 \\
+                {\color{highlight} \faGithub} & \link{https://github.com/iago-mendes/}{github.com/iago-mendes} & {\color{highlight} \faEnvelope} & \link{mailto:ibrazmen@oberlin.edu}{ibrazmen@oberlin.edu} \\
+                {\color{highlight} \faLinkedin} & \link{https://linkedin.com/in/mendes-iago/}{linkedin.com/in/mendes-iago} & \\
             \end{tabular}
         \end{center}
     \end{minipage}
@@ -103,4 +100,11 @@
 }{
 	\end{itemize}
     \vspace*{-0.25cm}
+}
+
+
+\newcommand{\link}[2]{
+    % \href{#1}{\underline{#2}}
+    % \href{#1}{\textit{#2}}
+    \href{#1}{#2}
 }

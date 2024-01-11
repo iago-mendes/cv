@@ -4,7 +4,7 @@
 \LoadClass[a4paper, 12pt, dvipsnames]{article}
 
 \RequirePackage[dvipsnames]{xcolor}
-\RequirePackage[top=1cm, bottom=1cm, left=1cm, right=1cm]{geometry}
+\RequirePackage[top=0.5cm, bottom=0.5cm, left=0.5cm, right=0.5cm]{geometry}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage{graphicx, caption}
 \RequirePackage{float}
@@ -73,7 +73,7 @@
 \titlespacing*{\section} {0cm}{-0.25cm}{-0.1cm}
 
 \titleformat{\subsection}
-    {\bfseries \large} % format
+    {\bfseries} % format
     {} % label
     {0pt} % sep
     {} % before-code

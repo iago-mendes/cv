@@ -18,9 +18,9 @@
 \RequirePackage{enumitem}
 
 \hypersetup {
-    pdftitle=CV \textbar{} Iago Mendes,
+    pdftitle=Iago Mendes' Resume,
     pdfauthor=Iago Mendes,
-    pdfsubject=CV,
+    pdfsubject=Resume,
     colorlinks=false,
 }
 

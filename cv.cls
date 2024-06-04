@@ -1,7 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{cv}[Curriculum vitae]
 
-\LoadClass[a4paper, 12pt, dvipsnames]{article}
+\LoadClass[letterpaper, 12pt, dvipsnames]{article}
 
 \RequirePackage[dvipsnames]{xcolor}
 \RequirePackage[top=1cm, bottom=0.5cm, left=0.5cm, right=0.5cm]{geometry}

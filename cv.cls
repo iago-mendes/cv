@@ -36,15 +36,15 @@
 % Remove page numbering
 \pagenumbering{gobble}
 
-\newcommand{\header}[2] {
+\newcommand{\header}[3][ibrazmen@oberlin.edu] {
     \noindent
     \begin{minipage}[c]{0.35\linewidth}
         \begin{center}
-            {\fontsize{40pt}{0pt} \color{highlight} \caveat #1}
+            {\fontsize{40pt}{0pt} \color{highlight} \caveat #2}
             
             \vspace*{0.2cm}
             
-            {\large \bf #2}
+            {\large \bf #3}
         \end{center}
     \end{minipage}
     \hfill
@@ -52,7 +52,7 @@
         \begin{center}
             \begin{tabular}{clcl}
                 {\color{highlight} \faCode} & \link{https://iagomendes.com/}{iagomendes.com} & {\color{highlight} \faPhone} & 440-581-2598 \\
-                {\color{highlight} \faGithub} & \link{https://github.com/iago-mendes/}{github.com/iago-mendes} & {\color{highlight} \faEnvelope} & \link{mailto:ibrazmen@oberlin.edu}{ibrazmen@oberlin.edu} \\
+                {\color{highlight} \faGithub} & \link{https://github.com/iago-mendes/}{github.com/iago-mendes} & {\color{highlight} \faEnvelope} & \link{mailto:#1}{#1} \\
                 {\color{highlight} \faLinkedin} & \link{https://linkedin.com/in/mendes-iago/}{linkedin.com/in/mendes-iago} & \\
             \end{tabular}
         \end{center}
